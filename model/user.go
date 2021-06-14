@@ -20,7 +20,7 @@ type User struct {
 	Avatar                 string
 	Status                 string
 	RegisterFrom           string
-	Facebook               datatypes.JSON
+	Facebook               datatypes.JSON // UserFacebook
 	Google                 datatypes.JSON
 	Apple                  datatypes.JSON
 	SearchTokens           TsVector
@@ -37,6 +37,13 @@ type User struct {
 // TableName overrides the table name
 func (User) TableName() string {
 	return "users"
+}
+
+// UserFacebook ...
+type UserFacebook struct {
+	ID    string `json:"id"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
 // UserStats ...
