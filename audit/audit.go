@@ -36,7 +36,7 @@ func NewInstance(config Config) (*Service, error) {
 	}
 
 	// Connect MongoDB
-	db, err := mongodb.Connect(
+	err := mongodb.Connect(
 		config.MongoDB.Host,
 		config.MongoDB.User,
 		config.MongoDB.Password,
@@ -51,7 +51,7 @@ func NewInstance(config Config) (*Service, error) {
 
 	s := Service{
 		Config: config,
-		DB:     db,
+		DB:     mongodb.GetInstance(),
 	}
 
 	// index mongo

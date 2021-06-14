@@ -62,7 +62,7 @@ func NewInstance(config Config) (*Service, error) {
 	ctx := context.Background()
 
 	// Connect db first
-	db, err := postgresql.Connect(
+	err := postgresql.Connect(
 		config.PostgreSQL.Host,
 		config.PostgreSQL.User,
 		config.PostgreSQL.Password,
@@ -93,7 +93,7 @@ func NewInstance(config Config) (*Service, error) {
 	s := Service{
 		Config: config,
 		Client: client,
-		DB:     db,
+		DB:     postgresql.GetInstance(ctx),
 	}
 	return &s, nil
 }

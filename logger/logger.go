@@ -21,12 +21,12 @@ var (
 )
 
 // Init ...
-func Init(server string) { // server "app" or "admin"
+func Init(server string) {
 	cfg := zap.Config{
 		Encoding:      "json",
 		Level:         zap.NewAtomicLevelAt(zapcore.DebugLevel),
 		OutputPaths:   []string{"stdout"},
-		InitialFields: map[string]interface{}{"server": "", "capture": "otobook"},
+		InitialFields: map[string]interface{}{"server": "", "capture": "caris"},
 		EncoderConfig: zapcore.EncoderConfig{
 			MessageKey:  "message",
 			LevelKey:    "level",

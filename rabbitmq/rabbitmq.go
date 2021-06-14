@@ -13,12 +13,12 @@ var (
 	channel    *amqp.Channel
 )
 
-// Init ...
-func Init(uri string) *amqp.Connection {
+// Connect ...
+func Connect(uri string) error {
 	conn, err := amqp.Dial(uri)
 	if err != nil {
 		fmt.Println(aurora.Red("*** Connect to RabbitMQ failed: " + uri))
-		panic(err)
+		return err
 	}
 
 	fmt.Println(aurora.Green("*** CONNECTED TO RABBITMQ: " + uri))
@@ -29,6 +29,11 @@ func Init(uri string) *amqp.Connection {
 	// Set channel
 	channel, _ = connection.Channel()
 
+	return nil
+}
+
+// GetConnection ...
+func GetConnection() *amqp.Connection {
 	return connection
 }
 

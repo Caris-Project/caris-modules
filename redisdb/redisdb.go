@@ -16,7 +16,7 @@ var (
 )
 
 // Connect ...
-func Connect(uri, password string) (*redis.Client, error) {
+func Connect(uri, password string) error {
 	ctx := context.Background()
 
 	rdb = redis.NewClient(&redis.Options{
@@ -29,12 +29,12 @@ func Connect(uri, password string) (*redis.Client, error) {
 	_, err := rdb.Ping(ctx).Result()
 	if err != nil {
 		fmt.Println("Error when connect to Redis", uri, err)
-		return nil, err
+		return err
 	}
 
 	fmt.Println(aurora.Green("*** CONNECTED TO REDIS: " + uri))
 
-	return rdb, nil
+	return nil
 }
 
 // SetKeyValue ...

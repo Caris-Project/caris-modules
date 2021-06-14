@@ -13,7 +13,7 @@ import (
 var db *gorm.DB
 
 // Connect ...
-func Connect(host, user, password, dbname, port string) (*gorm.DB, error) {
+func Connect(host, user, password, dbname, port string) error {
 	var err error
 
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
@@ -27,7 +27,7 @@ func Connect(host, user, password, dbname, port string) (*gorm.DB, error) {
 
 	if err != nil {
 		fmt.Println("Error when connect to PostgreSQL database", dsn, err)
-		return nil, err
+		return err
 	}
 
 	fmt.Println(aurora.Green("*** CONNECTED TO POSTGRESQL: " + dsn))
@@ -38,7 +38,7 @@ func Connect(host, user, password, dbname, port string) (*gorm.DB, error) {
 	sqlDB.SetMaxIdleConns(20)
 	sqlDB.SetConnMaxLifetime(time.Minute * 5)
 
-	return db, nil
+	return nil
 }
 
 // GetInstance ...
