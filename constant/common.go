@@ -25,6 +25,9 @@ var (
 		PhoneCountryCodeVietNam,
 	}
 
+	EchoContextKeyStaffID = "staffID"
+	EchoContextKeyUserID  = "userID"
+
 	Limit10 = 10
 	Limit20 = 20
 
