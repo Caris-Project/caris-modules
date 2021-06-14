@@ -29,3 +29,18 @@ func replaceStringWithRegex(src string, regex string, replaceText string) string
 	reg := regexp.MustCompile(regex)
 	return reg.ReplaceAllString(src, replaceText)
 }
+
+// FormatPhoneFull ...
+func FormatPhoneFull(countryCode, number string) string {
+	// Country code always format as: +{country_code}, ex: +84
+	// Convert number to 9 chars, without "0" at start
+	numberLength := len(number)
+
+	// Remove char 0
+	if numberLength == 10 && string(number[0]) == "0" {
+		number = number[1:]
+	}
+
+	// Join and return
+	return countryCode + number
+}

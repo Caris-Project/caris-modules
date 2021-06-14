@@ -10,6 +10,9 @@ const (
 	CommonKeyInvalidOTP              = "common_invalid_otp"
 	CommonKeyInvalidPhoneCountryCode = "common_invalid_phone_country_code"
 	CommonKeyInvalidPhoneNumber      = "common_invalid_phone_number"
+	CommonKeyInvalidFacebookToken    = "common_invalid_facebook_token"
+	CommonKeyInvalidGoogleToken      = "common_invalid_google_token"
+	CommonKeyInvalidAppleToken       = "common_invalid_apple_token"
 )
 
 // 1-199
@@ -53,5 +56,20 @@ var common = []Locale{
 		Key:     CommonKeyInvalidPhoneNumber,
 		Message: "số điện thoại không hợp lệ",
 		Code:    8,
+	},
+	{
+		Key:     CommonKeyInvalidFacebookToken,
+		Message: "thông tin Facebook không hợp lệ",
+		Code:    9,
+	},
+	{
+		Key:     CommonKeyInvalidGoogleToken,
+		Message: "thông tin Google không hợp lệ",
+		Code:    10,
+	},
+	{
+		Key:     CommonKeyInvalidAppleToken,
+		Message: "thông tin Apple không hợp lệ",
+		Code:    11,
 	},
 }
