@@ -20,9 +20,14 @@ var (
 		OSNameIOS, OSNameAndroid,
 	}
 
+	PhoneCountryCodeVietNam = "+84"
+	PhoneCountryCodeList    = []interface{}{
+		PhoneCountryCodeVietNam,
+	}
+
 	Limit10 = 10
 	Limit20 = 20
 
-	DateLayoutFull   = "2006-01-02T15:04:05.000Z"
+	DateLayoutFull     = "2006-01-02T15:04:05.000Z"
 	DateLayoutYYYYMMDD = "2006-01-02"
 )

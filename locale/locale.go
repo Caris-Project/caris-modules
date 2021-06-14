@@ -33,8 +33,8 @@ var list = make([]Locale, 0)
 
 // Init ...
 func Init() {
-	// 1-99
+	// 1-199
 	list = append(list, common...)
-	// 200-249
-	// ...
+	// 200-299
+	list = append(list, user...)
 }
