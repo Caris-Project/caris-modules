@@ -15,6 +15,7 @@ require (
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
 	github.com/thoas/go-funk v0.8.0
+	github.com/twpayne/go-geom v1.4.0
 	go.elastic.co/apm/module/apmzap v1.12.0
 	go.mongodb.org/mongo-driver v1.5.3
 	go.uber.org/zap v1.13.0
