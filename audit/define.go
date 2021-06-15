@@ -1,5 +1,10 @@
 package audit
 
+// Source
+const (
+	SourceCaris = "caris"
+)
+
 // List actions
 const (
 	ActionCreate            = "create"
