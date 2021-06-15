@@ -44,3 +44,12 @@ func FormatPhoneFull(countryCode, number string) string {
 	// Join and return
 	return countryCode + number
 }
+
+// JoinStringWithUnderscore ...
+func JoinStringWithUnderscore(str string) string {
+	// Lowercase first, then split string with "space char" and join with "_"
+	// E.g: input = "Customer care" -> output = "customer_care"
+
+	parts := strings.SplitN(strings.ToLower(str), " ", -1)
+	return strings.Join(parts, "_")
+}

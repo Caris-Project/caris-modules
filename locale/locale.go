@@ -37,4 +37,6 @@ func Init() {
 	list = append(list, common...)
 	// 200-299
 	list = append(list, user...)
+	// 300-399
+	list = append(list, staff...)
 }
