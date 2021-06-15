@@ -29,10 +29,12 @@ type Service struct {
 	DB *mongo.Database
 }
 
+var s *Service
+
 // NewInstance ...
-func NewInstance(config Config) (*Service, error) {
+func NewInstance(config Config) error {
 	if config.Source == "" || config.MongoDB.Host == "" {
-		return nil, errors.New("please provide all information that needed: source, mongodb")
+		return errors.New("please provide all information that needed: source, mongodb")
 	}
 
 	// Connect MongoDB
@@ -46,10 +48,10 @@ func NewInstance(config Config) (*Service, error) {
 	)
 	if err != nil {
 		fmt.Println("Cannot init module AUDIT", err)
-		return nil, err
+		return err
 	}
 
-	s := Service{
+	s = &Service{
 		Config: config,
 		DB:     mongodb.GetInstance(),
 	}
@@ -57,7 +59,12 @@ func NewInstance(config Config) (*Service, error) {
 	// index mongo
 	s.indexDB()
 
-	return &s, nil
+	return nil
+}
+
+// GetInstance ...
+func GetInstance() *Service {
+	return s
 }
 
 // getColName ...
