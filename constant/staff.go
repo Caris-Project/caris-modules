@@ -1,9 +1,12 @@
 package constant
 
 // Constant
-const (
+var (
 	StaffStatusActive = "active"
 	StaffStatusBanned = "banned"
+	StaffStatusList   = []interface{}{
+		StaffStatusActive, StaffStatusBanned,
+	}
 
 	StaffRoleAdmin = "admin"
 )

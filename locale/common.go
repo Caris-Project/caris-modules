@@ -15,6 +15,8 @@ const (
 	CommonKeyInvalidAppleToken       = "common_invalid_apple_token"
 	CommonKeyPhoneNumberExisted      = "common_phone_number_existed"
 	CommonKeyLoginFailed             = "common_login_failed"
+	CommonKeyInvalidStatus           = "common_invalid_status"
+	CommonKeyInvalidPagination       = "common_invalid_pagination"
 )
 
 // 1-199
@@ -83,5 +85,15 @@ var common = []Locale{
 		Key:     CommonKeyLoginFailed,
 		Message: "thông tin đăng nhập không chính xác",
 		Code:    13,
+	},
+	{
+		Key:     CommonKeyInvalidStatus,
+		Message: "trạng thái không hợp lệ",
+		Code:    14,
+	},
+	{
+		Key:     CommonKeyInvalidPagination,
+		Message: "phân trang không hợp lệ",
+		Code:    15,
 	},
 }
