@@ -27,3 +27,16 @@ func ConvertToDataTypesJSON(d interface{}) datatypes.JSON {
 	jsonData := datatypes.JSON(bytes)
 	return jsonData
 }
+
+// GetValueOfLangFromJSON ...
+func GetValueOfLangFromJSON(data datatypes.JSON, lang string) string {
+	byteData, err := data.MarshalJSON()
+	if err != nil {
+		return ""
+	}
+	var mapData map[string]string
+	if err = json.Unmarshal(byteData, &mapData); err != nil {
+		return ""
+	}
+	return mapData[lang]
+}
