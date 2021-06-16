@@ -14,6 +14,7 @@ const (
 	CommonKeyInvalidGoogleToken      = "common_invalid_google_token"
 	CommonKeyInvalidAppleToken       = "common_invalid_apple_token"
 	CommonKeyPhoneNumberExisted      = "common_phone_number_existed"
+	CommonKeyLoginFailed             = "common_login_failed"
 )
 
 // 1-199
@@ -77,5 +78,10 @@ var common = []Locale{
 		Key:     CommonKeyPhoneNumberExisted,
 		Message: "số điện thoại đã tồn tại trong hệ thống",
 		Code:    12,
+	},
+	{
+		Key:     CommonKeyLoginFailed,
+		Message: "thông tin đăng nhập không chính xác",
+		Code:    13,
 	},
 }

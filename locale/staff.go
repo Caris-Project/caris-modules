@@ -8,6 +8,7 @@ const (
 	StaffKeyInvalidName     = "staff_invalid_name"
 	StaffKeyInvalidPassword = "staff_invalid_password"
 	StaffKeyInvalidRole     = "staff_invalid_role"
+	StaffKeyNotFound        = "staff_not_found"
 )
 
 // 300-399
@@ -36,5 +37,10 @@ var staff = []Locale{
 		Key:     StaffKeyInvalidRole,
 		Message: "nhóm quyền không hợp lệ",
 		Code:    304,
+	},
+	{
+		Key:     StaffKeyNotFound,
+		Message: "nhân viên không tìm thấy",
+		Code:    305,
 	},
 }
