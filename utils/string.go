@@ -53,3 +53,11 @@ func JoinStringWithUnderscore(str string) string {
 	parts := strings.SplitN(strings.ToLower(str), " ", -1)
 	return strings.Join(parts, "_")
 }
+
+// TransformKeywordToSearchString ...
+func TransformKeywordToSearchString(keyword string) string {
+	s := strings.TrimSpace(keyword)
+	s = RemoveDiacritics(s)
+	s = strings.ReplaceAll(s, " ", "&")
+	return s + ":*" // For prefix search
+}
