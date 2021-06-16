@@ -13,6 +13,7 @@ const (
 	CommonKeyInvalidFacebookToken    = "common_invalid_facebook_token"
 	CommonKeyInvalidGoogleToken      = "common_invalid_google_token"
 	CommonKeyInvalidAppleToken       = "common_invalid_apple_token"
+	CommonKeyPhoneNumberExisted      = "common_phone_number_existed"
 )
 
 // 1-199
@@ -71,5 +72,10 @@ var common = []Locale{
 		Key:     CommonKeyInvalidAppleToken,
 		Message: "thông tin Apple không hợp lệ",
 		Code:    11,
+	},
+	{
+		Key:     CommonKeyPhoneNumberExisted,
+		Message: "số điện thoại đã tồn tại trong hệ thống",
+		Code:    12,
 	},
 }

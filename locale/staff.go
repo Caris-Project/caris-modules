@@ -4,6 +4,10 @@ package locale
 const (
 	StaffKeyRoleInvalidName = "staff_role_invalid_name"
 	StaffKeyRoleNameExisted = "staff_role_name_existed"
+
+	StaffKeyInvalidName     = "staff_invalid_name"
+	StaffKeyInvalidPassword = "staff_invalid_password"
+	StaffKeyInvalidRole     = "staff_invalid_role"
 )
 
 // 300-399
@@ -17,5 +21,20 @@ var staff = []Locale{
 		Key:     StaffKeyRoleNameExisted,
 		Message: "nhóm nhân viên đã tồn tại",
 		Code:    301,
+	},
+	{
+		Key:     StaffKeyInvalidName,
+		Message: "tên nhân viên không hợp lệ",
+		Code:    302,
+	},
+	{
+		Key:     StaffKeyInvalidPassword,
+		Message: "mật khẩu phải từ 6-32 ký từ",
+		Code:    303,
+	},
+	{
+		Key:     StaffKeyInvalidRole,
+		Message: "nhóm quyền không hợp lệ",
+		Code:    304,
 	},
 }

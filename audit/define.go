@@ -1,6 +1,6 @@
 package audit
 
-// Source
+// Sources
 const (
 	SourceCaris = "caris"
 )

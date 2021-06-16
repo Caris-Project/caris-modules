@@ -2,7 +2,7 @@ package constant
 
 import "golang.org/x/text/language"
 
-// Constant ...
+// Constant
 var (
 	EnvDevelop    = "develop"
 	EnvStaging    = "staging"

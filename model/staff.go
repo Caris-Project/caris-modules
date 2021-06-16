@@ -1,11 +1,16 @@
 package model
 
-import "time"
+import (
+	"strings"
+	"time"
+
+	"github.com/Caris-Project/caris-modules/utils"
+)
 
 // Staff ...
 type Staff struct {
 	ID             string `gorm:"primaryKey"`
-	Username       string
+	Phone          string `gorm:"uniqueKey"`
 	Name           string
 	HashedPassword string
 	Status         string
@@ -20,4 +25,11 @@ type Staff struct {
 // TableName overrides the table name
 func (Staff) TableName() string {
 	return "staffs"
+}
+
+// GenerateSearchTokens ...
+func (s *Staff) GenerateSearchTokens() {
+	values := []string{utils.RemoveDiacritics(s.Name), s.Phone}
+	vecValue := strings.Join(values, " ")
+	s.SearchTokens = TsVector{Value: vecValue}
 }
