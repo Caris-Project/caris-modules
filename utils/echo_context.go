@@ -22,3 +22,9 @@ func GetStaffIDFromEchoContext(c echo.Context) string {
 	}
 	return staffIDInterface.(string)
 }
+
+// GetLanguageFromEchoContext ...
+func GetLanguageFromEchoContext(c echo.Context) string {
+	lang := c.Get("lang")
+	return lang.(string)
+}
