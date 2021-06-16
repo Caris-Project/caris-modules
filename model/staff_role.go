@@ -4,16 +4,17 @@ import (
 	"time"
 
 	"github.com/lib/pq"
+	"gorm.io/datatypes"
 )
 
 // StaffRole ...
 type StaffRole struct {
-	ID          string
-	Name        string
-	Desc        string
-	Role        string         `gorm:"primaryKey"`
-	Permissions pq.StringArray `gorm:"type:text[]"`
-	CreatedAt   time.Time
+	ID           string
+	Name         datatypes.JSON
+	Role         string         `gorm:"primaryKey"`
+	Permissions  pq.StringArray `gorm:"type:text[]"`
+	SearchTokens TsVector
+	CreatedAt    time.Time
 }
 
 // TableName overrides the table name
