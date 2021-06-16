@@ -33,3 +33,8 @@ func (s *Staff) GenerateSearchTokens() {
 	vecValue := strings.Join(values, " ")
 	s.SearchTokens = TsVector{Value: vecValue}
 }
+
+// IsRole ...
+func (s Staff) IsRole(role string) bool {
+	return s.RoleID == role
+}
