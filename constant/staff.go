@@ -4,4 +4,6 @@ package constant
 const (
 	StaffStatusActive = "active"
 	StaffStatusBanned = "banned"
+
+	StaffRoleAdmin = "admin"
 )
