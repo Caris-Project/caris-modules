@@ -12,21 +12,21 @@ import (
 
 const timezoneHCM = "Asia/Ho_Chi_Minh"
 
-// getHCMLocation ...
-func getHCMLocation() *time.Location {
+// GetHCMLocation ...
+func GetHCMLocation() *time.Location {
 	l, _ := time.LoadLocation(timezoneHCM)
 	return l
 }
 
 // TimeNow ...
 func TimeNow() time.Time {
-	loc := getHCMLocation()
+	loc := GetHCMLocation()
 	return time.Now().In(loc)
 }
 
 // TimeWithHoursAgo ...
 func TimeWithHoursAgo(hoursAgo int) time.Time {
-	loc := getHCMLocation()
+	loc := GetHCMLocation()
 	t := time.Now().Add(time.Hour * -1 * time.Duration(hoursAgo)).In(loc)
 	return t
 }
