@@ -11,6 +11,7 @@ require (
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/google/uuid v1.2.0
+	github.com/hibiken/asynq v0.17.2
 	github.com/kr/pretty v0.1.0
 	github.com/labstack/echo/v4 v4.3.0
 	github.com/lib/pq v1.8.0

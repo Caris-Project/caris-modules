@@ -1,4 +1,4 @@
-package constant
+package queue
 
 // Constant
 const (
