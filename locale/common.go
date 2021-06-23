@@ -17,6 +17,7 @@ const (
 	CommonKeyLoginFailed             = "common_login_failed"
 	CommonKeyInvalidStatus           = "common_invalid_status"
 	CommonKeyInvalidPagination       = "common_invalid_pagination"
+	CommonKeyReferralCodeRequired    = "common_referral_code_required"
 )
 
 // 1-199
@@ -95,5 +96,10 @@ var common = []Locale{
 		Key:     CommonKeyInvalidPagination,
 		Message: "phân trang không hợp lệ",
 		Code:    15,
+	},
+	{
+		Key:     CommonKeyReferralCodeRequired,
+		Message: "mã mời bạn không được trống",
+		Code:    16,
 	},
 }
