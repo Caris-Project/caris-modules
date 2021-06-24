@@ -18,5 +18,5 @@ type Referral struct {
 
 // TableName overrides the table name
 func (Referral) TableName() string {
-	return "referral"
+	return "user_referrals"
 }
