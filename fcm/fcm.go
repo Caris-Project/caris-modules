@@ -53,10 +53,12 @@ type Service struct {
 	DB     *gorm.DB
 }
 
+var s *Service
+
 // NewInstance for push notification
-func NewInstance(config Config) (*Service, error) {
+func NewInstance(config Config) error {
 	if config.ProjectID == "" || config.Credential == "" || config.PostgreSQL.Host == "" {
-		return nil, errors.New("please provide all information that needed: projectId, credential, postgresql")
+		return errors.New("please provide all information that needed: projectId, credential, postgresql")
 	}
 
 	ctx := context.Background()
@@ -71,7 +73,7 @@ func NewInstance(config Config) (*Service, error) {
 	)
 	if err != nil {
 		fmt.Println("Cannot init module FCM", err)
-		return nil, err
+		return err
 	}
 
 	// Setup
@@ -81,21 +83,26 @@ func NewInstance(config Config) (*Service, error) {
 		ProjectID: config.ProjectID,
 	}, opts)
 	if err != nil {
-		return nil, errors.New("error when init Firebase app")
+		return errors.New("error when init Firebase app")
 	}
 
 	// Init messaging client
 	client, err := app.Messaging(ctx)
 	if err != nil {
-		return nil, errors.New("error when init Firebase messaging client")
+		return errors.New("error when init Firebase messaging client")
 	}
 
-	s := Service{
+	s = &Service{
 		Config: config,
 		Client: client,
 		DB:     postgresql.GetInstance(ctx),
 	}
-	return &s, nil
+	return nil
+}
+
+// GetInstance ...
+func GetInstance() *Service {
+	return s
 }
 
 // base64Decode ...
