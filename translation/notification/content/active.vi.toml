@@ -1,0 +1,3 @@
+[hello_someone]
+description = "Hello someone"
+other = "Chào {{.Name}}"
