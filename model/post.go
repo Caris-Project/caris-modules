@@ -25,6 +25,7 @@ type Post struct {
 	UpdatedAt            time.Time
 	SearchTokens         TsVector
 	Photos               datatypes.JSON
+	FromSystem           bool
 }
 
 // TableName overrides the table name
