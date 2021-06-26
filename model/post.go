@@ -1,7 +1,9 @@
 package model
 
 import (
+	"github.com/Caris-Project/caris-modules/utils"
 	"gorm.io/datatypes"
+	"strings"
 	"time"
 )
 
@@ -28,4 +30,11 @@ type Post struct {
 // TableName overrides the table name
 func (Post) TableName() string {
 	return "posts"
+}
+
+// GenerateSearchTokens ...
+func (p *Post) GenerateSearchTokens() {
+	values := []string{utils.RemoveDiacritics(p.Title)}
+	vecValue := strings.Join(values, " ")
+	p.SearchTokens = TsVector{Value: vecValue}
 }
