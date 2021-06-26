@@ -49,3 +49,8 @@ func (p *Post) IsPushNotification() bool {
 func (p *Post) IsValidStatus(status string) bool {
 	return p.Status == status
 }
+
+// IsSetTimer ...
+func (p *Post) IsSetTimer () bool {
+	return !p.PublishAt.IsZero() && !p.PostNow
+}
