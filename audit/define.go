@@ -16,4 +16,5 @@ const (
 const (
 	TargetStaff     = "staffs"
 	TargetStaffRole = "staff-roles"
+	TargetPost      = "posts"
 )
