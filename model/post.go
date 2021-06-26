@@ -44,3 +44,8 @@ func (p *Post) GenerateSearchTokens() {
 func (p *Post) IsPushNotification() bool {
 	return p.PushNotification && p.PostNow
 }
+
+// IsValidStatus ...
+func (p *Post) IsValidStatus(status string) bool {
+	return p.Status == status
+}
