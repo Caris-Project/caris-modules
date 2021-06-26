@@ -39,3 +39,8 @@ func (p *Post) GenerateSearchTokens() {
 	vecValue := strings.Join(values, " ")
 	p.SearchTokens = TsVector{Value: vecValue}
 }
+
+// IsPushNotification ...
+func (p *Post) IsPushNotification() bool {
+	return p.PushNotification && p.PostNow
+}
