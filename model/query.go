@@ -11,7 +11,7 @@ type AppQuery struct {
 	Status     string
 	DateFrom   time.Time
 	DateTo     time.Time
-	UseForNews bool
+	UseForNews string
 }
 
 // SetLimitMaxValue ...
