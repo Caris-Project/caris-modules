@@ -9,6 +9,8 @@ import (
 	"golang.org/x/text/language"
 )
 
+var langList = []string{"vi", "en"}
+
 type languageData struct {
 	Lang      string
 	Localizer *i18n.Localizer

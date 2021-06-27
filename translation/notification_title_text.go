@@ -3,7 +3,6 @@ package translation
 import (
 	"fmt"
 
-	"github.com/Caris-Project/caris-modules/constant"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"github.com/thoas/go-funk"
 )
@@ -11,8 +10,7 @@ import (
 var listNotificationTitle = make([]languageData, 0)
 
 func loadNotificationTitle(bundle *i18n.Bundle, pwd string) {
-	for _, langInterface := range constant.LangList {
-		lang := langInterface.(string)
+	for _, lang := range langList {
 
 		// Add language
 		path := fmt.Sprintf("%s/notification/title/active.%s.toml", pwd, lang)

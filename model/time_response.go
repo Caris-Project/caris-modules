@@ -3,8 +3,10 @@ package model
 import (
 	"encoding/json"
 	"time"
+)
 
-	"github.com/Caris-Project/caris-modules/constant"
+const (
+	DateLayoutFull = "2006-01-02T15:04:05.000Z"
 )
 
 // TimeResponse ...
@@ -25,7 +27,7 @@ func (t TimeResponse) MarshalJSON() ([]byte, error) {
 	if t.Time.IsZero() {
 		return json.Marshal("")
 	}
-	return json.Marshal(t.Time.Format(constant.DateLayoutFull))
+	return json.Marshal(t.Time.Format(DateLayoutFull))
 }
 
 // TimeResponseInit ...

@@ -1,7 +1,5 @@
 package model
 
-import "github.com/Caris-Project/caris-modules/constant"
-
 // FileConfig ...
 type FileConfig struct {
 	Host string
@@ -27,5 +25,5 @@ func GetNotificationPhotoURL(name string) string {
 	if name == "" {
 		return ""
 	}
-	return c.Host + constant.SizeSmallPrefix + name
+	return c.Host + "sm_" + name
 }

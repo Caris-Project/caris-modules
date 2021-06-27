@@ -4,8 +4,11 @@ import (
 	"encoding/json"
 
 	"gorm.io/datatypes"
+)
 
-	"github.com/Caris-Project/caris-modules/constant"
+const (
+	SizeSmallPrefix  = "sm_"
+	SizeMediumPrefix = "md_"
 )
 
 // Photo ...
@@ -33,8 +36,8 @@ func ParsePhotoFromJSON(jsonData datatypes.JSON) (result *Photo) {
 		return
 	}
 
-	result.Small.URL = c.Host + constant.SizeSmallPrefix + result.Name
-	result.Medium.URL = c.Host + constant.SizeMediumPrefix + result.Name
+	result.Small.URL = c.Host + SizeSmallPrefix + result.Name
+	result.Medium.URL = c.Host + SizeMediumPrefix + result.Name
 	return
 }
 
@@ -52,8 +55,8 @@ func ParsePhotosFromJSON(jsonData datatypes.JSON) (result []Photo) {
 	}
 
 	for i, _ := range result {
-		result[i].Small.URL = c.Host + constant.SizeSmallPrefix + result[i].Name
-		result[i].Medium.URL = c.Host + constant.SizeMediumPrefix + result[i].Name
+		result[i].Small.URL = c.Host + SizeSmallPrefix + result[i].Name
+		result[i].Medium.URL = c.Host + SizeMediumPrefix + result[i].Name
 	}
 	return
 }
