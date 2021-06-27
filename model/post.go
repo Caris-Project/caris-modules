@@ -51,6 +51,6 @@ func (p *Post) IsValidStatus(status string) bool {
 }
 
 // IsSetTimer ...
-func (p *Post) IsSetTimer () bool {
+func (p *Post) IsSetTimer() bool {
 	return !p.PublishAt.IsZero() && !p.PostNow
 }

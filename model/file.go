@@ -29,3 +29,11 @@ func GetNotificationPhotoURL(name string) string {
 	}
 	return c.Host + constant.SizeSmallPrefix + name
 }
+
+// GenerateAudioURL ..
+func GenerateAudioURL(url string) string {
+	if url == "" {
+		return ""
+	}
+	return c.Host + url
+}

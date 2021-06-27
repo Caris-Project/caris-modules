@@ -20,3 +20,4 @@ func (q *AppQuery) SetLimitMaxValue() {
 		q.Limit = 50
 	}
 }
+
