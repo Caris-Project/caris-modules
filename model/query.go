@@ -4,13 +4,14 @@ import "time"
 
 // AppQuery ...
 type AppQuery struct {
-	Page      int
-	Timestamp time.Time
-	Limit     int
-	Keyword   string
-	Status    string
-	DateFrom  time.Time
-	DateTo    time.Time
+	Page       int
+	Timestamp  time.Time
+	Limit      int
+	Keyword    string
+	Status     string
+	DateFrom   time.Time
+	DateTo     time.Time
+	UseForNews bool
 }
 
 // SetLimitMaxValue ...
