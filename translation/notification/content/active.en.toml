@@ -1,3 +1,0 @@
-[hello_someone]
-description = "Hello someone"
-other = "Hello {{.Name}}"
