@@ -10,4 +10,6 @@ var (
 	PostStatusList      = []interface{}{
 		PostStatusPending, PostStatusTimer, PostStatusCanceled, PostStatusRemoved, PostStatusPublished,
 	}
+
+	RedisKeyNewsRecommended = "news_recommended"
 )
