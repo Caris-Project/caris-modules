@@ -1,6 +1,8 @@
 package utils
 
 import (
+	"strconv"
+
 	"github.com/Caris-Project/caris-modules/constant"
 	"github.com/labstack/echo/v4"
 )
@@ -27,4 +29,12 @@ func GetStaffIDFromEchoContext(c echo.Context) string {
 func GetLanguageFromEchoContext(c echo.Context) string {
 	lang := c.Get("lang")
 	return lang.(string)
+}
+
+// GetIntFromQuery ...
+func GetIntFromQuery(c echo.Context, key string) int {
+	v := c.QueryParam(key)
+
+	i, _ := strconv.Atoi(v)
+	return i
 }

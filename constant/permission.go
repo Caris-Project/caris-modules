@@ -4,4 +4,7 @@ package constant
 const (
 	StaffView = "staff_view"
 	StaffEdit = "staff_edit"
+
+	UserView = "user_view"
+	UserEdit = "user_edit"
 )
