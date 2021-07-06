@@ -12,6 +12,7 @@ func InitFolder() {
 	createFolder(uploadFilePath)
 }
 
+// createFolder ...
 func createFolder(path string) {
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		// path/to/whatever does not exist
