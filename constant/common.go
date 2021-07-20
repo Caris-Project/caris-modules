@@ -34,3 +34,8 @@ var (
 	DateLayoutFull     = "2006-01-02T15:04:05.000Z"
 	DateLayoutYYYYMMDD = "2006-01-02"
 )
+
+const (
+	IdentityCodeCharacters = "abcdefghjklmnpqrstuvwxyz123456789" // No i, o, and 0
+	IdentityCodeLength     = 6
+)
