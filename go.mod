@@ -6,8 +6,10 @@ require (
 	cloud.google.com/go v0.82.0 // indirect
 	cloud.google.com/go/storage v1.15.0 // indirect
 	firebase.google.com/go/v4 v4.6.0
-	github.com/BurntSushi/toml v0.3.1
+	github.com/Timothylock/go-signin-with-apple v0.0.0-20210707043924-6aeb093b70ea
+	github.com/aws/aws-sdk-go v1.34.28
 	github.com/go-redis/redis/v8 v8.10.0
+	github.com/golang-jwt/jwt v3.2.1+incompatible // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/google/uuid v1.2.0
@@ -15,13 +17,13 @@ require (
 	github.com/kr/pretty v0.1.0
 	github.com/kr/text v0.2.0 // indirect
 	github.com/labstack/echo/v4 v4.3.0
-	github.com/lib/pq v1.8.0
+	github.com/lib/pq v1.8.0 // indirect
 	github.com/logrusorgru/aurora v2.0.3+incompatible
-	github.com/nicksnyder/go-i18n/v2 v2.1.2
 	github.com/samuel/go-zookeeper v0.0.0-20190923202752-2cc03de413da
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
 	github.com/thoas/go-funk v0.8.0
-	github.com/twpayne/go-geom v1.4.0
+	github.com/tideland/golib v4.24.2+incompatible // indirect
+	github.com/tideland/gorest v2.15.5+incompatible // indirect
 	go.elastic.co/apm/module/apmzap v1.12.0
 	go.mongodb.org/mongo-driver v1.5.3
 	go.uber.org/zap v1.13.0
